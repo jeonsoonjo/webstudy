@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>quiz02</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <style>
+        /* 검색 창에 글을 쓰려고 할 때 검색창에 배경색 넣기 */
+        input[name="search"]:focus {
+            background-color: aquamarine;
+        }
+        
+        /* 성별을 택했을 때 색상 넣기 */
+        input[type="radio"]:checked + label {
+            color: red;
+        }
+        
+        /* 성별에 마우스 올렸을 때 손가락 모양으로 변경하기 */
+        input[type="radio"]:hover, /* option radio에 적용 */
+        input[type="radio"]:hover + label { /* label 글씨에 적용 */
+            cursor: pointer;
+        }
+        
+        /* 취미에 마우스 올렸을 때 색상 넣고, 손가락 모양으로 변경하기 */
+        input[type="checkbox"]:checked + span {
+            color: red;
+        }
+        input[type="checkbox"]:hover, 
+        input[type="checkbox"] + span:hover {
+            cursor: pointer;
+        }
+        
+        /* 연락처 전화번호 색상 바꾸기 */
+        input:disabled {
+            color: lightgray;
+        }
+        
+        /* 확인하기 버튼에 마우스를 올렸을때 배경, 글자 색 바꾸기 */
+        button:last-child:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <form>
+    
+    검색
+    <input type="text" name="search">
+    <button><i class="fas fa-search"></i></button>
+    
+    <br><br>
+    
+    <fieldset>
+        <legend>성별을 선택하세요</legend>
+        <input type="radio" name="gender" value="mail" id="g1"><label for="g1">남성</label>
+        <input type="radio" name="gender" value="femail" id="g2"><label for="g2">여성</label>
+    </fieldset>
+    
+    <br><br>
+    
+    <fieldset>
+        <legend>취미를 선택하세요</legend>
+        <input type="checkbox" name="hobby" value="movie"><span>영화</span> <!-- 위 성별 fieldset과 구별하기 위해 span태그 줌 -->
+        <input type="checkbox" name="hobby" value="travel"><span>여행</span>
+        <input type="checkbox" name="hobby" value="game"><span>게임</span>
+    </fieldset>
+    
+    <br><br>
+    
+    연락처를 확인하세요
+    <input type="text" name="tel" value="010-1234-5678" disabled>
+    
+    <br><br>
+    
+    <button>확인하기</button>
+    
+    </form>
+    
+</body>
+</html>
+
