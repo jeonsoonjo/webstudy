@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>quiz07</title>
+    <style>
+        ul {
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding-left: 0;
+            border-top: 2px solid gray;
+            border-bottom: 2px solid gray;
+        }
+        
+        ul > li {
+            height: 50px;
+            line-height: 50px;
+        }
+        
+        li > a {
+            text-decoration: none;
+            color: limegreen;
+            font-weight: 900;
+        }
+        
+        .finance {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            border-top: 1px solid gray;
+            border-bottom: 2px solid gray;
+        }
+        .finance > li {
+            margin-right: 40px;
+        }
+        .finance > li > a {
+            display: block;
+            width: 100%;
+            padding: auto 10px;
+            text-decoration: none;
+            color: black;
+            font-weight: 900;
+        }
+        .finance > li > a:hover { /* 마우스 올렸을 때 */
+            border-bottom: 3px solid orange;
+            color: red;
+        }
+        .finance > li > a:active { /* 클릭했을 때 */
+            border-bottom: 3px solid crimson;
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a>메일</a></li>
+        <li><a>카페</a></li>
+        <li><a>블로그</a></li>
+        <li><a>지식iN</a></li>
+        <li><a>쇼핑</a></li>
+        <li><a>Pay</a></li>
+        <li><a>▲TV</a></li>
+    </ul>
+    
+    <ul class="finance">
+        <li><a href="https://finance.naver.com/">증권 홈</a></li>
+        <li><a href="https://land.naver.com/">시장정보</a></li>
+        <li><a href="https://finance.naver.com/sise/lastsearch2.nhn">이슈</a></li>
+        <li><a href="https://finance.naver.com/sise/sise_quant.nhn">종목게시판</a></li>
+        <li><a href="https://news.naver.com/">뉴스</a></li>
+        <li><a href="https://finance.naver.com/mystock/itemList.nhn">My종목보드</a></li>
+    </ul>
+</body>
+</html>
+

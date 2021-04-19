@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>박스 모델</title>
+    <style>
+        /* 너비 : width, 높이 : height */
+        /* 주의 : 블록레벨태그에만 반영되고, 인라인요소에는 반영되지 않는다 */
+        /* 배경 : background */
+        /* 테두리 : border */
+        /* 내부여백 : padding, border 안쪽 */
+        /* 외부여백 : margin, border 바깥쪽 */
+        /* 그림자 : box-shadow */
+        
+        #box1 {
+            width: 300px;
+            height: 50px;
+        }
+        
+        #box2 {
+            /* 1. box크기 == img크기 */
+            /*
+            width: 640px;
+            height: 390px;
+            background-image: url(./images/cat.jpg);
+            background-size: 640px 390px; 너비 높이
+            */
+            
+            /* 2. box크기 < img크기 */
+            /*
+            width: 300px;
+            height: 300px;
+            background-image: url(images/cat.jpg);    
+            background-size: 300px 300px; 이미지 비율을 무시하면 사진이 찌그러진다
+            background-size: cover; 이미지 비율을 유지하며 맞춘다. 간혹 잘려나가는 부분이 발생할 수 있다
+            */
+            
+            /* 3. box크기 > img크기 */
+            width: 1000px;
+            height: 500px;
+            background-image: url(images/cat.jpg);
+            background-repeat: no-repeat;
+            background-position: top center; /* 세로(top, 생략(middle), bottom), 가로(left, center, right) */
+        }
+        
+        #box3 {
+            width: 100px;
+            height: 100px;
+            /*
+            border-top: 1px solid black;
+            border-right: 2px dashed black;
+            border-bottom: 3px dotted black;
+            border-left: 4px double black;
+            */
+            
+            border: 1px solid black;
+            /* border-radius : 모서리 곡률 지정 */
+            border-radius: 10px; /*  전체 */
+            border-radius: 10px 5px; /* 시계방향 11시/5시 1시/7시 */
+            border-radius: 10px 5px 10px; /* 11시 1시/7시 5시 */
+            border-radius: 5px 10px 15px 20px; /* 11시 1시 5시 7시 */
+        }
+        
+        #box4 {
+            border: 1px solid black;
+            /* padding : border 안쪽 여백 */
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            
+            /* 여백 한 번에 지정하기 */
+            padding: 10px; /* 전체 */
+            padding: 10px 20px; /* 상하 좌우 */
+            padding: 10px 0 10px; /* 상 좌우 하*/
+            padding: 10px 20px 30px 40px; /* 시계방향 상 우 하 좌*/
+        }
+        
+        #box5 {
+            width: 60px;
+            height: 60px;
+            padding: 10px;
+            border: 10px solid gray;
+            box-sizing: content-box; /* width/height가 콘텐츠의 크기이다 */
+        }
+        
+        #box6 {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: 10px solid silver;
+            box-sizing: border-box; /* width/height를 border까지 포함 */
+        }
+        
+        #box7 {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            
+            /* margin : border 바깥쪽 여백 */
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin: 10px;
+            margin: 10px 20px;
+            margin: 10px 5px 40px;
+            margin: 10px 20px 30px 40px;
+            
+            /* auto를 여백으로 사용할 수 있다 */
+            margin: 0 auto; /* 상,하 0 좌우 auto(center) */
+        }
+        
+        #box8 {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            box-shadow: 5px 5px gray; /* 가로 세로 그림자색상 */
+            box-shadow: -5px -5px gray;
+            box-shadow: 10px 10px 1px gray; /* 가로 세로 블러처리 그림자색상 */
+        }
+    </style>
+</head>
+<body>
+    <!-- div 태그 : 블록레벨, 영역을 만들 때 사용한다 -->
+    <!-- 1. 너비/높이 -->
+    <div id="box1">너비/높이 박스</div>
+    
+    <!-- 2. 이미지 배경 -->
+    <div id="box2"></div>
+    
+    <!-- 3. 테두리 -->
+    <div id="box3"></div>
+    
+    <!-- 4. 내부여백 -->
+    <div id="box4">내부여백을 확인합니다</div>
+    
+    <!-- 5. box-sizing : 박스 크기 지정 방법 -->
+    <div id="box5"></div>
+    <div id="box6"></div>
+    
+    <!-- 6. 외부여백 -->
+    <div id="box7">외부여백을 확인합니다</div>
+    
+    <!-- 7. 그림자 -->
+    <div id="box8"></div>
+</body>
+</html>
+
