@@ -3,8 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>quiz11</title>
+    <link rel="stylesheet" href="quiz11.css">
 </head>
 <body>
+    <div class="logo">
+        <a href="https://www.tistory.com/"><img src="images/tistory_logo.png" alt="로고"></a>
+    </div>
     
+    <div id="container">
+        <h2 class="screen_out">로그인</h2>
+        <strong class="title">TISTORY</strong>
+          
+        <form action="https://www.tistory.com/auth/login" method="post">
+            <fieldset>
+                <legend class="screen_out">로그인 정보 입력 폼</legend>
+                <div class="box_login">
+                   <!-- ID -->
+                   <div class="input_text">
+                       <label for="loginId" class="screen_out">로그인</label>
+                       <input type="email" id="loginId" placeholder="ID">
+                   </div>
+                   
+                   <!-- PW -->
+                   <div class="input_text">
+                       <label for="loginPw" class="screen_out">비밀번호</label>
+                       <input type="password" id="loginPw" placeholder="Password">
+                   </div>
+                </div>
+                
+                <!-- 로그인 버튼 -->
+                <button class="login_btn">로그인</button>
+                
+                <!-- 로그인상태유지, 아이디/비번 찾기 -->
+                <div class="login_append">
+                    <!-- 로그인 유지 -->
+                    <div>
+                        <input type="checkbox" id="keepLogin"><label for="keepLogin">로그인 상태 유지</label>
+                    </div>
+                    
+                    <!-- 아이디/비번 찾기 -->
+                    <div>
+                        <span class="find_info">
+                            <a href="">아이디</a> / <a href="">비밀번호 찾기</a>
+                        </span>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
 </body>
 </html>
+
