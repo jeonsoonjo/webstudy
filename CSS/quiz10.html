@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>quiz10</title>
+    <link rel="stylesheet" href="quiz10.css">
+</head>
+<body>
+    <!-- 전체 컨테이너 -->
+    <div class="container">
+        <!-- 상단 영역 -->
+        <header>
+            <div class="logo"></div>
+        </header>
+        
+        <!-- 본문 영역 -->
+        <section>
+            <!-- id, pw, 로그인 -->
+            <form action="https://nid.naver.com/nidlogin.login" method="post">
+                <input type="text" placeholder="아이디">
+                <span id="input-id-check"></span> <!-- '아이디를 입력해주세요' 알림메시지, JavaScript에서 조정가능하다 -->
+                <input type="password" placeholder="비밀번호">
+                <span id="input-pw-check"></span>
+                <input type="submit" value="로그인">
+            </form>
+           
+            <!-- 로그인 상태유지, ip보안 -->
+            <article class="login">
+                <div class="login-state"><a href="">◎ 로그인 상태 유지</a></div>
+                <div class="login-ip">IP 보안 <span>ON</span></div>
+            </article>
+            
+            <!-- 더욱 간편한 로그인(QR, 1회용 로그인) -->
+            <article class="login-easy">
+                <p>더욱 간편한 로그인</p>
+                <div class="login-easy-sub">
+                    <div class="login-easy-button">
+                        <button><a href="">QR코드 로그인</a></button>
+                    </div>
+                    <div class="login-easy-button">
+                        <button><a href="">일회용 번호 로그인</a></button>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- id, pw, 회원가입 -->
+            <article class="find-info">
+                <a href="">아이디 찾기</a> | <a href="">비밀번호 찾기</a> | <a href="">회원가입</a>
+            </article>
+        </section>
+                   
+        <!-- 광고(배너) -->          
+        <aside>
+            <div class="banner">
+                <a href=""><img src="images/banner.png"></a>
+            </div>
+        </aside>         
+                 
+        <!-- 하단 영역 --> 
+        <footer>
+            <p>
+                <a href="">이용약관</a> | <a href=""><strong>개인정보처리방침</strong></a> | <a href="">책임의 한계와 법적고지</a> | <a href="">회원정보 고객센터</a>
+            </p>
+            
+            <div class="company-info">
+                <div class="f_logo"></div>
+                <div>Copyright &copy; <a href=""><strong>NAVER Corp.</strong></a> All Rights Reserved.</div>
+            </div>
+        </footer>  
+    </div>
+</body>
+</html>
+

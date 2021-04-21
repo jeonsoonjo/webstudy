@@ -1,0 +1,166 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+html, body{
+    /* 기본 초기화 */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #f5f6f7;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 768px;
+    margin: 0 auto;
+}
+
+/* 상단 : 로고 */
+header{
+    padding: 106px 0 53px;
+}
+header > .logo{
+    margin: 0 auto;
+    width: 231px;
+    height: 44px;
+    background-image: url(images/naver.png);
+    background-size: cover; /* 비율에 맞춰 줄여준다 */
+    background-position: center;
+}
+header > .logo:hover{
+    cursor: pointer;
+}
+
+/* 본문 */
+/* id, pw, 로그인 */
+section{
+    margin: 0 auto;
+    width: 460px;
+}
+section > form > input{
+    width: 95%; /* 각각 한 줄을 차지한다 */
+    height: 40px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    border: 1px solid #e4e4e5;
+}
+input:disabled{
+    color: red;
+}
+section > form > input:focus{
+    outline: none;
+    border: 2px solid #03c75a;
+}
+section > form > input[type=submit]{
+    width: 460px;
+    height: 55px;
+    margin: 12px 0 14px;
+    background-color: #03c75a;
+    color: #fff;
+    font-weight: 900;
+    border: none;
+}
+section > form > input[type=submit]:hover{
+    cursor: pointer;
+}
+
+/* 로그인 상태유지, ip */
+.login{
+    width: 100%;
+    height: 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #e4e4e5;
+    padding-bottom: 10px;
+}
+.login > .login-state{
+    float: left;
+}
+.login > .login-ip{
+    float: right;
+}
+.login > .login-ip > span{
+    color: #03c75a;
+    font-weight: 900;
+}
+.login > .login-ip > span:hover{
+    cursor: pointer;
+}
+
+/* 간편 로그인 : 일회용 번호 로그인 */
+.login-easy{
+    margin-top: 30px;
+}
+.login-easy > p{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -.8px;
+    text-align: center;
+}
+.login-easy-sub{
+    display: flex;
+    justify-content: space-between;
+}
+.login-easy-button{
+    width: 48%;
+    height: 56px;
+    border: 1px solid #03c75a;
+    background-color: #fff;
+}
+.login-easy-button > button{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -.6px;
+}
+
+/* id, pw, 회원가입 */
+.find-info{
+    padding-top: 18px;
+    color: #8e8e8e;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+/* 사이드 */
+/* 광고(배너) */
+.banner{
+    margin: 50px auto 40px;
+    max-width: 460px;
+    height: 147px;
+    background-image: url(https://ssl.pstatic.net/static/nid/login/m_920_294_210308.png);
+    background-size: cover;
+    background-repeat: none;
+}
+
+
+/* 하단 */
+footer{
+    width: 100%;
+    text-align: center;
+}
+footer > p{
+    font-size: 12px;
+}
+footer > .company-info{
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+}
+footer > .company-info > .f_logo{
+    margin-right: 5px;
+    width: 50px;
+    height: 16px;
+    background-image: url(images/naver.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
