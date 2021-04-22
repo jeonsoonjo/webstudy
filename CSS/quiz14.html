@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>quiz14</title>
+    <style>
+        div{
+            box-sizing: border-box;
+        }
+        .container {
+            width: 960px;
+            margin: 0 auto;
+        }
+        .product-list{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .product {
+            position: relative;
+        }
+        .product > img {
+            width: 300px;
+            height: 200px;
+            z-index: 1;
+        }
+        .product > .product-description {
+            width: 300px;
+            height: 200px;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 2;
+            position: absolute;
+            top: 200px;
+            text-align: center;
+            color: white;
+            padding-top: 20px;
+            opacity: 0;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: ease-out;
+        }
+        .product > img:hover + .product-description {
+            opacity: 1;
+            transform: translateY(-200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="product-list">
+            <div class="product">
+                <img src="images/fruit1.jpg" alt="제품1">
+                <div class="product-description">
+                    <h1>과일</h1>
+                    <p>맛있는 과일</p>
+                    <p>가격 : 10,000원</p>
+                </div>
+            </div>
+            
+            <div class="product">
+                <img src="images/fruit2.jpg" alt="제품2">
+                <div class="product-description">
+                    <h1>과일</h1>
+                    <p>달콤한 과일</p>
+                    <p>가격 : 20,000원</p>
+                </div>
+            </div>
+            
+            <div class="product">
+                <img src="images/fruit3.jpg" alt="제품3">
+                <div class="product-description">
+                    <h1>과일</h1>
+                    <p>상큼한 과일</p>
+                    <p>가격 : 30,000원</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

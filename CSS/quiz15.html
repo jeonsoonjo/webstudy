@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>quiz15</title>
+    <style>
+        html, body, aside, div{
+            margin: 0;
+            padding: 0;
+        }
+        aside, div{
+            box-sizing: border-box;
+        }
+        aside{
+            width: 300px;
+        }
+        input[type=radio]{
+            display: none;
+        }
+        .content-list{
+            display: none;
+        }
+        
+        /* id가 front인 radio가 선택되었다면 프론트엔드 내용이 나타난다 */
+        #front:checked ~ div:nth-of-type(2){
+            display: block; /* 내용을 보여줌 */
+        }
+        
+        .tab-menu{
+            display: flex;
+        }
+        .tab-menu > label {
+            /* label은 inline이라서 너비, 높이가 적용되지 않는다. 그래서 block으로 바꾼 후 크기를 지정한다 */
+            display: inline-block;
+            width: 150px;
+            padding: 20px 0; /* 상하20px : height 높이고, 텍스트의 세로정렬 효과 */
+            text-align: center;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <!-- 상단 탭 -->
+        <input type="radio" name="tab" id="front" checked>
+        <input type="radio" name="tab" id="back">
+        <div class="tab-menu">
+            <label for="front">프론트엔드</label>
+            <label for="back">백엔드</label>
+        </div>
+        
+        <!-- 프론트엔드 클릭했을 때 나타날 화면 -->
+        <div class="content-list">
+            <ul>
+                <li class="content">
+                    <!-- 작은이미지 -->
+                    <div id="thumb1" class="thumnail">
+                        
+                    </div>
+                    <!-- 내용 -->
+                    <div class="description">
+                        <h3>HTML</h3>
+                        <p>Hypertext Markup Language</p>
+                    </div>
+                </li>
+                
+                <li class="content">
+                    <!-- 작은이미지 -->
+                    <div id="thumb2" class="thumnail">
+                        
+                    </div>
+                    <!-- 내용 -->
+                    <div class="description">
+                        <h3>CSS</h3>
+                        <p>Cascading Style Sheet</p>
+                    </div>
+                </li>
+                
+                <li class="content">
+                    <!-- 작은이미지 -->
+                    <div id="thumb3" class="thumnail">
+                        
+                    </div>
+                    <!-- 내용 -->
+                    <div class="description">
+                        <h3>JavaScript</h3>
+                        <p>ECMA Script</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </aside>
+</body>
+</html>
+
+
