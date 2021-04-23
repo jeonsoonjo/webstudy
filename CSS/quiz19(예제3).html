@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>quiz19</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        a{
+            text-decoration: none;
+        }
+        
+        .wrap{
+            margin: 0 auto;
+            width: 600px;
+            height: 350px;
+            background-color: #f2f2de;
+            margin-top: 100px;
+        }
+        .welcome{
+            box-shadow: 0 5px 4px gray;
+        }
+        .title{
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            font-size: 25px;
+            background-color: lightgray;
+        }
+        .login{
+            float: left;
+            width: 300px;
+            height: 280px;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            border: none;
+        }
+        .log_box{
+            position: relative;
+            width: 100%;
+            height: 55px;
+            line-height: 10px;
+            padding: 4px 10px 4px 50px;
+            border: 1px solid darkgray;
+            background-color: darkgray;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+        .int{
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            padding-top: 10px;
+            font-size: 15px;
+            color: gray;
+            border: none;
+            background-color: darkgray;
+            outline: none;
+        }
+        .log_box > span{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            
+        }
+        .log_box > span > i{
+            color: white;
+        }
+        .login > p{
+            margin: 0;
+            margin-top: 3px;
+            margin-bottom: 25px;
+            font-size: 16px;
+            text-align: right;
+        }
+        .login > p > a{
+            color: gray;
+        }
+        button{
+            float: right;
+            width: 60%;
+            height: 55px;
+            background-color: #c30d0d;
+            color: white;
+            font-weight: 600;
+            border: none;
+            outline: none;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        
+        
+        .sns{
+            float: right;
+            width: 300px;
+            height: 280px;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            border: none;
+        }
+        .sns_box{
+            width: 100%;
+            height: 55px;
+            line-height: 45px;
+            padding: 3px 10px 5px 20px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+        .sns_box:first-child{
+            background-color: skyblue;
+            border: none;
+        }
+        .sns_box:nth-of-type(2){
+            background-color: navy;
+            border: none;
+        }
+        .sns_box:last-child{
+            background-color: red;
+            border: none;
+        }
+        .sns_box > a > i{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="welcome">
+            <p class="title">WELCOME</p>
+        </div>
+        
+        <div class="login">
+            <div class="log_box">
+                <span><i class="far fa-smile-beam"></i></span>
+                <input type="text" id="id" class="int" name="id" value="User or Email">
+            </div>
+            <p><a href="">Forgot your username?</a><p>
+            
+            <div class="log_box">
+                <span><i class="fas fa-unlock"></i></span>
+                <input type="text" id="pw" class="int" name="pw" value="Password">
+            </div>
+            <p><a href="">Forgot your password?</a><p>
+            
+            <div class="bt_box">
+                <a href=""><button>LOGIN NOW</button></a>
+            </div>
+        </div>
+        
+        <div class="sns">
+            <div class="sns_box">
+                <a class="sns_tw" href=""><i class="fab fa-twitter"><span> Log in with Twitter</span></i></a>
+            </div>
+            
+            <div class="sns_box">
+                <a class="sns_fb" href=""><i class="fab fa-facebook-f"><span> Log in with Facebook</span></i></a>
+            </div>
+               
+            <div class="sns_box">
+                <a class="sns_gg" href=""><i class="fab fa-google-plus-g"><span> Log in with Google+</span></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

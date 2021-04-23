@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>quiz21(예제5)</title>
+    <link rel="stylesheet" href="quiz21.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2 id="title">회원가입 폼</h2>
+        </header>
+        
+        <section>
+            <form class="info1" method="post">
+                <div class="info_box">
+                    <p class="info_title">필수정보</p>
+                    
+                    <p class="term"><label for="id">아이디</label></p>
+                    <div class="input_box">
+                        <input type="text" id="id" class="int" name="id">
+                    </div>
+                    
+                    <p class="term"><label for="pw">비밀번호</label></p>
+                    <div class="input_box">
+                        <input type="password" id="pw" class="int" name="pw">
+                    </div>
+                    
+                    <p class="term"><label for="pw">비밀번호확인</label></p>
+                    <div class="input_box">
+                        <input type="text" id="pw" class="int" name="pw">
+                    </div>
+                    
+                    <p class="term"><label for="name">이름</label></p>
+                    <div class="input_box">
+                        <input type="text" id="name" class="int" name="name">
+                    </div>
+                    
+                    <p class="term"><label for="gender">성별</label></p>
+                    <div class="input_box2">
+                        <input type="radio" name="gender" value="none" id="g1" checked><label for="g1">선택안함</label>
+                        <input type="radio" name="gender" value="femail" id="g2"><label for="g2">여성</label>
+                        <input type="radio" name="gender" value="mail" id="g3"><label for="g3">남성</label>
+                    </div>
+
+                    <p class="term"><label for="mobile">연락처</label></p>
+                    <div class="input_box3">
+                        <select class="int2" name="mobile1">
+                            <option value="010" selected>010</option>
+                            <option value="02">02</option>
+                            <option value="032">032</option>
+                            <option value="031">031</option>
+                        </select>
+                        
+                        <p>-</p>
+                        
+                        <div class="input_box3">
+                            <input type="text" id="mobile2" class="int2">
+                        </div>
+                        
+                        <p>-</p>
+                        
+                        <div class="input_box3">
+                            <input type="text" id="mobile3" class="int2">
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </form>
+                
+            <form class="info2" method="post">
+                <div class="info_box">
+                    <p class="info_title">선택정보</p>
+                    
+                    <p class="term"><label for="nick">닉네임</label></p>
+                    <div class="input_box">
+                        <input type="text" id="nick" class="int" name="nick">
+                    </div>
+                    
+                    <p class="term"><label for="email">이메일</label></p>
+                    <div class="input_box4">
+                        <input type="text" id="email" class="int" name="email">
+                        
+                        <p>@</p>
+                        
+                        <select class="int3" name="domain">
+                            <option value="" selected>도메인입력/선택</option>
+                            <option value="naver">naver.com</option>
+                            <option value="daum">daum.net</option>
+                            <option value="gmail">gmail.com</option>
+                            <option value="nate">nate.com</option>
+                        </select>
+                    </div>
+                    
+                    <p class="term"><label for="email_yesNo">이메일수신</label></p>
+                    <div class="input_box5">
+                        <input type="radio" name="yes" value="yes" id="y" checked><label for="y">수신</label>
+                        <input type="radio" name="no" value="no" id="n"><label for="n">미수신</label>
+                    </div>
+                    
+                    <p class="term"><label for="sns_yesNo">SNS수신</label></p>
+                    <div class="input_box5">
+                        <input type="radio" name="yes" value="yes" id="y2" checked><label for="y2">수신</label>
+                        <input type="radio" name="no" value="no" id="n2"><label for="n2">미수신</label>
+                    </div>
+                    
+                    <p class="term"><label for="habit">취미 활동</label></p>
+                    <div class="input_box6">
+                        <input type="checkbox" name="reading" value="1">독서
+                        <input type="checkbox" name="fishing" value="2">낚시
+                        <input type="checkbox" name="swim" value="3">수영
+                    </div>
+                    
+                    <p class="term"><label for="profile">프로필사진</label></p>
+                    <button>파일 선택</button>
+                    <span>선택된 파일 없음</span>
+                    
+                    <div class="join">
+                        <input type="button" value="회원가입">
+                        <input type="reset" value="다시작성">
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
+
+

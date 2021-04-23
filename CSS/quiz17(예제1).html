@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>quiz17</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header > .imgbox{
+            margin: 0 auto;
+            width: 500px;
+            height: 350px;
+            background-image: url(images/fruit1.jpg);
+            background-size: cover;
+            overflow: hidden;
+        }
+        
+        section{
+            position: relative;
+            margin: 0 auto;
+            padding: 4px;
+            width: 500px;
+            height: 480px;
+            margin-top: 5px;
+            border: 1px solid lightgray;
+        }
+        .info{
+            position: absolute;
+            margin: 0 auto;
+            padding: 3px 410px 3px 3px;
+            text-align: left;
+            background-color: black;
+            color: white;
+            font-size: 17px;
+            font-weight: 900;
+        }
+        
+        .notice-list{
+            margin-top: 50px;
+        }
+        #notice{
+            margin-top: 30px;
+            text-align: center;
+            border-bottom: 1px solid darkgray;
+        }
+        #notice:last-child{
+            border-bottom: none;
+        }
+        #notice > .title{
+            color: red;
+            font-size: 20px;
+            font-weight: 900;
+        }
+        #notice > p{
+            font-size: 20px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+        #notice > p > span{
+            color: blue;
+        }
+        #notice > p > span:last-child{
+            font-size: 12px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <header>
+           <div class="imgbox"></div>
+       </header>
+       
+       <section>
+           <div class="info">확인하세요</div>
+           
+           <div class="notice-list">
+              <div id="notice">
+                  <span class="title">주문 및 배송</span><br>
+                  <p><span>오후 2시 이전</span> 주문건은 당일 발송합니다<br>
+                  2시 이후 주문건은 다음날 발송합니다(주말 제외)</p>
+              </div>
+
+              <div id="notice">
+                  <span class="title">교환 및 환불</span><br>
+                  <p>불만족시 <span>100% 환불</span>해 드립니다<br>
+                  고객센터로 전화주세요</p>
+              </div>
+
+              <div id="notice">
+                  <span class="title">고객센터</span><br>
+                  <p>0000-0000<br>
+                  <span>상담시간 : 오전 9시 ~ 오후 6시 (토/일, 공휴일 휴무)</span></p>
+              </div>
+           </div>
+       </section>
+    </div>
+</body>
+</html>
+
+
