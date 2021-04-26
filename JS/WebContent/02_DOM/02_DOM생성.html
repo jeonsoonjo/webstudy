@@ -43,9 +43,7 @@
 		document.body.appendChild(p); // <body><p>반갑습니다. 자바스크립트입니다.</p></body>
 		
 		// 1. 삭제할 요소 알아내기
-		// var deleteElement = document.body.firstChild;
 		var deleteElement = document.getElementById('container');
-		alert(deleteElement.getAttribute('id'));
 		// 2. 요소 삭제
 		deleteElement.parentNode.removeChild(deleteElement);
 	</script>

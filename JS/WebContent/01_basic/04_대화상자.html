@@ -18,16 +18,15 @@
 		// console.log(b)
 		
 		// 이름을 입력 받아서 "내 이름은 xxx입니다."
-		// 나이를 입력 받아서 "성인/미성년자이고, 내년 나이틑 xx살입니다"
+		// 나이를 입력 받아서 "성인/미성년자이고, 내년 나이는 xx살입니다"
+		var name=prompt('이름을 입력하세요');
+		alert('내 이름은' + name + '입니다');
 		
-		
-		
-		
-		
-		
-		
-		
-		
+		var age=prompt('나이를 입력하세요');
+		var gubun=age>=20 ? '성인' : '미성년자';
+		// nextAge=age+1; '20'+1 -> '201' 문자열의 +연산은 무조건 연결이다. 숫자로 변환해야 함
+		var nextAge=parseInt(age)+1;
+		alert(gubun + '이고, 내년 나이는 ' + nextAge + '살입니다');
 	</script>
 	
 </head>
