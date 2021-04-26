@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+
+	<h1 id="title" class="hello">안녕하세요</h1>
+	<div id="container" class="wrap">
+		<div id="box1" class="box">박스1</div>
+		<div id="box2" class="box">박스2</div>
+		<div id="box3" class="box">박스3</div>
+	</div>
+	<script>
+	/* <h1 id="title" class="hello">안녕하세요</h1> 선택 방법
+		document.getElementById('title');
+		document.querySelector('#title');
+		document.getElementByTagName('h1')[0]; // 동일한 게 있을 수 있으니 배열로 지정해야 처음부터 읽는다
+		document.getElementByClassName('hello')[0];
+		document.querySelector('#title');
+		document.querySelector('h1')[0];
+		document.querySelector('.hello')[0];
+	*/
+	/*
+		console.log(document.getElementById('title'));
+		console.log(document.getElementByTagName('h1')[0]);
+		console.log(document.getElementByClassName('hello')[0]);
+		console.log(document.querySelector('#title'));
+		console.log(document.querySelector('h1')[0]);
+		console.log(document.querySelector('.hello')[0]);
+	*/
+	
+	// 문제1) id="title" 삭제하기
+	// 1. 삭제할 요소 알아내기
+	var deleteElement = document.getElementById('title');
+	// 2. 요소 삭제
+	document.body.removeChild(deleteElement);
+	
+	// 문제2) id="box3" 삭제하기
+	var d = document.getElementById('box3');
+	document.getElementById('container').removeChild(d);
+	
+	</script>
+	
+</body>
+</html>
+
+
