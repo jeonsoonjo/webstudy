@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>33</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        .wrap{
+            margin: 0 auto;
+            margin-top: 250px;
+            width: 500px;
+            height: 330px;
+            background-color: beige;
+        }
+        .title{
+            width: 500px;
+            height: 50px;
+            background-color: lightgray;
+            box-shadow: 0 5px 5px gray;
+        }
+        .title > p{
+            text-align: center;
+            line-height: 50px;
+            font-size: 25px;
+            font-weight: 500;
+        }
+        .login{
+            position: relative;
+            float: left;
+            width: 250px;
+            height: 270px;
+            padding: 10px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            border: none;
+        }
+        .int{
+            width: 100%;
+            height: 50px;
+            margin-top: 10px;
+            background-color: darkgray;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            color: gray;
+            text-indent: 24%;
+            font-size: 15px;
+        }
+        .input_box > span{
+            position: absolute;
+            color: white;
+            padding: 25px;
+        }
+        .input_box > p{
+            margin: 0;
+            margin-bottom: 10px;
+            text-align: right;
+        }
+        .input_box a{
+            color: gray;
+        }
+
+
+
+
+
+        .sns{
+            float: right;
+            width: 250px;
+            height: 270px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="title">
+            <p>WELCOME</p>
+        </div>
+        <div class="content">
+            <div class="login">
+                <div class="input_box">
+                    <span><i class="far fa-smile"></i></span>
+                    <input type="text" id="id" name="id" class="int" value="User or Email">
+                    <p><a href="#">Forgot your username?</a></p>
+                </div>
+
+                <div class="input_box">
+                    <span><i class="far fa-smile"></i></span>
+                    <input type="text" id="pw" name="pw" class="int" value="Password">
+                    <p><a href="#">Forgot your password?</a></p>
+                </div>
+
+                <div class="log_btn">
+                    <button>LOGIN NOW</button>
+                </div>
+            </div>
+            <div class="sns">
+                <div class="sns_list">
+                    <p><a href="#">Log in with Twitter</a></p>
+                    <p><a href="#">Log in with Facebook</a></p>
+                    <p><a href="#">Log in with Google+</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
