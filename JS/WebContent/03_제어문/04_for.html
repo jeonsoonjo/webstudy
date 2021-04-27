@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		table{
+			border-collapse: collapse;
+		}
+		table, td{
+			border: 1px solid gray;
+		}
+		td{
+			padding: 5px 3px;
+		}
+		.even{
+			background-color: beige;
+		}
+	</style>
+</head>
+<body>
+	<div id="practice1"></div>
+	<script>
+		// 문제1)
+		// 정수를 입력 받아서 입력 받은 구구단 테이블 출력하기
+		/*
+		let dan=Number(prompt('몇 단을 출력할까요?'))
+		let table=document.createElement('table'); // <table></table>
+		if(dan % 2 == 0){ // 단이 짝수이면
+			table.setAttribute('class', 'even'); // class명에 even생성
+		}
+		let tbody=document.createElement('tbody'); // <tbody></tbody>
+		table.appendChild(tbody); // <table><tbody></tbody></table>
+		for(let n=1; n<=9; n++){
+			let tr=document.createElement('tr'); // <tr></tr>
+			let td1=document.createElement('td'); // <td></td>
+			td1.textContent=dan; // <td>dan</td>
+			tr.appendChild(td1); // <tr><td>dan</td></tr>
+			
+			let td2=document.createElement('td'); // <td></td>
+			td2.textContent='x'; // <td>x</td>
+			tr.appendChild(td2);
+			
+			let td3=document.createElement('td');
+			td3.textContent=n;
+			tr.appendChild(td3);
+			
+			let td4=document.createElement('td');
+			td4.textContent='=';
+			tr.appendChild(td4);
+			
+			let td5=document.createElement('td');
+			td5.textContent=(dan*n);
+			tr.appendChild(td5);
+			
+			tbody.appendChild(tr);
+		}
+		document.getElementById('practice1').appendChild(table);
+		*/
+	</script>
+	
+	<div id="practice2"></div>
+	<script>
+		// 문제2)
+		// 전체 구구단 출력하기
+		var table=document.createElement('table');
+		var tbody=document.createElement('tbody');
+		table.appendChild(tbody); // <table><tbody></tbody></table>
+		for(let n=1; n<=9; n++){
+			let tr=document.createElement('tr');
+			for(let dan=2; dan<=9; dan++){
+				let td=document.createElement('td');
+				td.textContent=(dan + 'x' + n + '=' + (dan*n));
+				tr.appendChild(td);
+			}
+			tbody.appendChild(tr);
+		}
+		document.getElementById('practice2').appendChild(table);
+	</script>
+</body>
+</html>
+
+
