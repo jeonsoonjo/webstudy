@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		ul{
+			border: 1px solid black;
+			list-style-type: none;
+			overflow: hidden;
+		}
+		li{
+			width: 100px;
+			height: 45px;
+			border: 1px solid blue;
+			float: left;
+		}
+		a{
+			display: block;
+			background-color: skyblue;
+			width: 100%;
+			height: 45px;
+			line-height: 45px;
+			text-align: center;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	
+	<ul>
+		<li><a href="javascript:void(0)">사전</a></li>
+		<li><a href="javascript:void(0)">뉴스</a></li>
+		<li><a href="javascript:void(0)">증권</a></li>
+		<li><a href="javascript:void(0)">부동산</a></li>
+		<li><a href="javascript:void(0)">지도</a></li>
+	</ul>
+	
+	<header>
+		<div class="gnb"></div>
+	</header>
+	
+	<script>
+		var menu=['메일', '카페', '블로그', '쇼핑', 'Pay'];
+		var ul=document.createElement('ul'); // <ul></ul> 생성
+		document.getElementsByClassName('gnb')[0].appendChild(ul);
+		for(let i=0; i<menu.length; i++){ // <li></li> 5개 생성(for문 사용)
+			var a=document.createElement('a'); // a링크 생성
+			a.textContent=menu[i]; // a링크에 menu텍스트 넣기
+			a.setAttribute('href', 'javascript:void(0)'); // href링크 생성
+			var li=document.createElement('li');
+			li.appendChild(a);
+			ul.appendChild(li);
+		}
+		
+	</script>
+</body>
+</html>
+
+

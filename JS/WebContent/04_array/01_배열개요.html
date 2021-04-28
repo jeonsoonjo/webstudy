@@ -27,8 +27,9 @@
 		array2[0]=100;
 		console.log(array2[0]);
 		array2[2]=300;
-		console.log(array2[2]); // undefined(인덱스를 직접 다루면 홀(hole)이 생길 우려가 있다
-
+		console.log(array2[2]); 
+		console.log(array2[1]); // undefined(인덱스를 직접 다루면 홀(hole)이 생길 우려가 있다
+				
 		var arr=[1,2,3]
 		// 1) 추가 메소드
 		arr.push(4); // 마지막 요소로 4를 추가 [1,2,3,4]
@@ -39,6 +40,14 @@
 		// 2) 제거 메소드
 		var del1=arr.pop(); // push반대어. 마지막 요소를 반환하고 삭제 [5,1,6,2,3]
 		var del2=arr.shift(); // unshift반대어. 첫 번째 요소를 반환하고 삭제 [1,6,2,3]
+		var del3=arr.splice(1,1); // 인덱스 1부터 1개 삭제 [1,2,3]
+		console.log(del1, del2, del3, arr);
+		
+		// 5. 배열의 길이
+		// 배열의 길이를 수정할 수 있다
+		console.log('배열의 길이: ' + arr.length);
+		arr.length=5;
+		console.log(arr[0], arr[1], arr[2], arr[3], arr[4]);
 
 	</script>
 </head>
