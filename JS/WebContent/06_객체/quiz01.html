@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<div id="practice1"></div>
+	<script>
+		var people=[
+			{
+				'name':'브레드',
+				'age': 10
+			},
+			{
+				'name':'윌크',
+				'age': 5
+			},
+			{
+				'name':'초코',
+				'age': 4
+			}
+		];
+		// console.log(people);
+		
+		var table=document.createElement('table'); // <table></table> 생성
+		document.getElementById('practice1').appendChild(table); // <div practice1><table> 넣기
+		var thead=document.createElement('thead'); // <thead></thead> 생성
+		table.appendChild(thead); // <table><thead> 넣기
+		var tr=document.createElement('tr'); // <tr></tr> 생성
+		thead.appendChild(tr); // <thead><tr> 넣기
+		
+		var title=['이름', '나이'];
+		for(let i=0; i<title.length; i++){
+			var th=document.createElement('th'); // <th></th> 생성
+			th.textContent=title[i]; // <th>title[i]</th> 넣기
+			tr.appendChild(th); // <tr><th> 넣기
+		}
+		
+		var tbody=document.createElement('tbody'); // <tbody></tbody> 생성
+		table.appendChild(tbody); // <table><tbody> 넣기
+		for(let i=0; i<people.length; i++){
+			var tr=document.createElement('tr'); // <tr></tr> 생성
+			tbody.appendChild(tr); // <tbody><tr> 넣기
+			// people[i]는 객체이다. {'name':'브레드', 'age':10}
+			for(let p in people[i]){ // 객체의 프로퍼티 사용
+				// people[i][p] : people[i]['name'], people[i]['age']
+				var td=document.createElement('td'); // <td></td> 생성
+				td.textContent=people[i][p];
+				tr.appendChild(td); // <tr><td> 넣기
+			}
+		}
+		
+	</script>
+</body>
+</html>
+
+
