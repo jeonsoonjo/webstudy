@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		// 원의 넓이를 반환하는 getCircleArea() 함수 구현
+		// 1. 내부 함수 : pi의 제곱을 반환하는 함수
+		// 2. 외부 함수 : 원의 넓이를 반환하는 함수
+		// 내부함수를 외부로 반환할 수 있다
+		function outer(){
+			function inner(){
+				console.log('이름: 브레드, 나이: 10살');
+			}
+			return inner; // 내부 선언적 함수 자체를 반환
+		}
+		
+		var f=outer();
+		f(); // f에는 inner() 함수가 저장되어 있으므로 함수 호출로 처리
+		
+		
+		// 내부함수를 외부로 반환할 때는
+		// 내부함수의 변수값이 외부에서도 유지된다(스코프가 이상하다)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
+
+
