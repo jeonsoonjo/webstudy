@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		// 페이지 로드 이벤트(window 생략 가능)
+		onload=function(){
+			// box를 클릭하면 box에 텍스트가 변경되도록 이벤트 등록
+			
+			// 이벤트 객체  생셩
+			var box=document.getElementById('box');
+			
+			
+			// 1. 고전 이벤트 모델
+			/*
+				box.onclick=function(){
+					// 이벤트객체를 이벤트리스너에서 호출하는 방법
+					// 1) 이벤트리스너에서는 이벤트객체를 this라고 한다(this 활용 방식)
+					this.textContent='불렀어요?'; // this == box
+				}
+			*/
+				box.onclick=function(event){
+					// 이벤트객체를 이벤트리스너에서 호출하는 방법
+					// 2) 이벤트가 발생하면 발생된 이벤트가 객체 형태로 생성된다(event 활용 방식)
+					// 발생된 이벤트를 이벤트리스너에 매개변수로 선언해서 사용할 수 있다
+					console.log(event);
+					event.target.textContent='아 왜???';
+				}
+			
+			// 2. 표준 이벤트 모델(추천)
+			var box2=document.getElementById('box2');
+			
+			// 1) this
+			box2.addEventListener('click', function(){
+				this.textContent='부르셨습니까?';
+			});
+			
+			// 2) event
+			box2.addEventListener('click', function(event){
+				event.target.style.backgroundColor='yellow';
+			});
+		}
+		
+		// 3. 인라인 이벤트 모델(html body 태그에도 객체 내부에 직접 선언해줘야 한다)
+		// 인라인 이벤트 모델은 onload 외부에서 호출해야 가능하다
+		function f(box3){
+			box3.textContent='클릭했습니다';
+		}
+	</script>
+</head>
+<body>
+	<div id="box">클릭하기 전 BOX</div>
+	<div id="box2">클릭하기 전 BOX2</div>
+	<div id="box3" onclick="f(this)">클릭하기 전 BOX3</div>
+</body>
+</html>
+

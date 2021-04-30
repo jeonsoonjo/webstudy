@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		// onload : HTML문서(body)를 모두 읽은 뒤에 실행
+		// 위에서 아래로 코드를 읽기 때문에 body의 내용을 읽어낼 수 없다. onload를 써주면 가능하다
+		
+		// 1. 고전방식(추천:onload 빼고는 표준 방식 or 인라인 방식 이용할 것)
+		window.onload=function(){ // window는 생략 가능
+			document.getElementById('box').textContent='나는 박스다';
+		}
+		// 2. 표준방식
+		window.addEventListener('load', function(){
+			
+		});
+	</script>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+</html>
+
+
