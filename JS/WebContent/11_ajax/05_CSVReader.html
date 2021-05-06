@@ -4,7 +4,25 @@
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
 	<script>
-	
+		onload=function(){
+			var request=new XMLHttpRequest();
+			request.open('get', 'data.csv', true);
+			request.send();
+			request.onreadystatechange=function(){
+				if(request.readyState==4 && request.status==200){
+					var resText=request.responseText; // resText : '자바,오라클,HTML,CSS,JS' 문자열이다
+					var items=resText.split(','); // ,기준으로 배열을 가져온다 -> items:['자바','오라클','HTML','CSS','JS']
+					
+					var ul=document.createElement('ul'); // <ul> 생성
+					document.getElementById('receive').appendChild(ul); // <div receive><ul> 넣기
+					for(let i=0; i<items.length; i++){
+						var li=document.createElement('li'); // <li> 생성
+						li.textContent=items[i];
+						ul.appendChild(li); // <ul><li> 넣기
+					}
+				}
+			}
+		}
 	</script>
 </head>
 <body>

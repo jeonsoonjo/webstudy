@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+	onload=function(){
+		document.getElementById('get_btn').addEventListener('click', function(){
+			getCar();
+		});
+		function getCar(){
+			var request=new XMLHttpRequest();
+			request.open('get', 'data.json', true);
+			request.send();
+			request.onreadystatechange=function(){
+				if(request.readyState==4 && request.status==200){
+					// var resText=request.responseText; -> 실행 안 됨...
+					// console.log(resText); resText를 가져왔지만
+					// console.log(typeof resText); string으로 인식되기에 정보가 나오지 않는다(객체로 인식하지 못 함)
+					// string을 객체로 변환해야 한다
+					// var A=JSON.parse(strA);
+					var resText=JSON.parse(request.responseText);
+					// 즉, ajax 통신으로 받아온 JSON 데이터는 string이다
+					// 객체(object)로 바궈야 한다
+					
+					var ul=document.getElementById('receive');
+					var li=document.createElement('li'); // <li> 생성
+					li.textContent=resText.model; // 객체 호출
+					ul.appendChild(li); // <ul><li> 넣기
+					
+					var li=document.createElement('li');
+					li.textContent=resText.price;
+					ul.appendChild(li);
+					
+					var li=document.createElement('li');
+					li.textContent=resText.mDate;
+					ul.appendChild(li);
+					
+					var li=document.createElement('li');
+					// li.textContent=resText.company.name+', '+resText.company.country; // 객체 속의 객체
+					// 객체를 배열로 풀어보기
+					// for(let 프로퍼티 in 객체){
+					//				객체.프로퍼티 => 사용할 수 없다
+					//				객체[프로퍼티] => 사용가능하다
+					//		}
+					var company=resText.company; // company = {}
+					var result='';
+					for(let p in company){
+						// company.p : company."name" company."country"와 같이 되므로 사용이 불가하다(문자열로 인식)
+						// company[p] : company["name"] company["country"]	와 같이 되므로 사용이 가능하다
+						result += company[p] + '&nbsp;';
+					}
+					li.innerHTML=result;
+					ul.appendChild(li);
+					
+					var li=document.createElement('li');
+					var option=resText.option; // 배열 option = []
+					var result='';
+					for(let i=0; i<option.length; i++){
+						result += option[i]+' ';
+					}
+					li.textContent=result;
+					ul.appendChild(li);
+					
+				}
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<input type="button" value="자동차 정보 가져오기" id="get_btn">
+	<br><br>
+	<ul id="receive"></ul>
+</body>
+</html>
+
+
