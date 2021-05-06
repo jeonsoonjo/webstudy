@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<people>
+		<person>
+			<name>전순조</name>
+			<age>34</age>
+			<address>서울 신림동</address>
+			<tel>010-8399-3625</tel>
+		</person>
+		
+		<person>
+			<name>성봉현</name>
+			<age>34</age>
+			<address>경기도 삼송동</address>
+			<tel>010-1234-5678</tel>
+		</person>
+		
+		<person>
+			<name>윤건우</name>
+			<age>7</age>
+			<address>경기도 성복동</address>
+			<tel>010-1111-2222</tel>
+		</person>
+	</people>
