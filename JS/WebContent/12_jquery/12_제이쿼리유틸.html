@@ -8,9 +8,6 @@
 	<!-- 제이쿼리 쿠키 CDN -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous"></script>
 	<script>
-	
-		// 페이지 로드 이벤트
-		
 		$(function(){
 		
 			// 쿠키: cookie (웹 브라우저의 저장소)
@@ -35,13 +32,10 @@
 					console.log($.cookie());
 				}
 			})
-			
 		})
-	
 	</script>
 </head>
 <body>
-
 	<form>
 		<h3>전송할까요?</h3>
 		<label><input type="radio" name="question" value="y">예</label>
@@ -50,6 +44,7 @@
 		<button id="send_btn">전송하기</button>
 		<input type="button" id="delete_btn" value="전송내역삭제하기">
 	</form>
-
 </body>
 </html>
+
+
