@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../styles/pratice.css">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- 네이버 로고 -->
+        <header>
+            <h1></h1>
+        </header>
+
+        <!-- 본문 -->
+        <section>
+            <form name="join" method="post">
+                <!-- 아이디 -->
+                <div class="row">
+                    <h3 class="title">
+                        <label for="id">아이디</label>
+                    </h3>
+                    <div class="box">
+                        <input type="text" name="id" id="id" class="int">
+                        <span class="int_url">@naver.com</span>
+                    </div>
+                </div>
+
+                <!-- 비밀번호 -->
+                <div class="row">
+                    <h3 class="title">
+                        <label for="pw">비밀번호</label>
+                    </h3>
+                    <div class="box">
+                        <input type="password" name="pw" id="pw" class="int">
+                        <span class="int_url"><i class="fas fa-unlock"></i></span>
+                    </div>
+                </div>
+
+                <!-- 비밀번호 재확인 -->
+                <div class="row">
+                    <h3 class="title">
+                        <label for="re_pw">비밀번호 재확인</label>
+                    </h3>
+                    <div class="box">
+                        <input type="password" name="re_pw" id="re_pw" class="int">
+                        <span class="int_url"><i class="far fa-check-circle"></i></span>
+                    </div>
+                </div>
+                <br><br>
+
+                <!-- 이름 -->
+                <div class="row">
+                    <h3 class="title">
+                        <label for="name">이름</label>
+                    </h3>
+                    <div class="box no_padding_box">
+                        <input type="text" name="name" id="name" class="int">
+                    </div>
+                </div>
+
+                <!-- 생년월일 box, birth_box / int, int2 -->
+                <div class="row">
+                    <h3 class="title">
+                        <label for="birth">생년월일</label>
+                    </h3>
+
+                    <div class="ymd">
+                        <!-- 년도 -->
+                        <div class="box birth_box">
+                            <input type="text" name="yyyy" id="yyyy" class="int int2" maxlength="4" placeholder="년(4자)">
+                        </div>
+                        <!-- 월 -->
+                        <div class="box birth_box">
+                            <select name="mm" id="mm" class="int int2">
+                                <option value="">월</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+                        <!-- 일 -->
+                        <div class="box birth_box">
+                            <input type="text" name="dd" id="dd" class="int int2" maxlength="2" placeholder="일">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 성별 -->
+                <div class="row">
+                    <h3 class="title">
+                        <label for="gender">성별</label>
+                    </h3>
+                    <div class="box no_padding_box">
+                        <select name="gender" id="gender" class="int">
+                            <option value="">성별</option>
+                            <option value="male">남자</option>
+                            <option value="female">여자</option>
+                            <option value="unisex">선택 안함</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 본인 확인 이메일 -->
+                <div class="row">
+                    <h3 class="title">
+                        <label for="email">본인 확인 이메일<span class="term">(선택)</span></label>
+                    </h3>
+                    <div class="box no_padding_box">
+                        <input type="text" name="email" id="email" class="int">
+                    </div>
+                </div>
+                <br><br>
+
+                <!-- 휴대전화 -->
+                <div class="row">
+                    <h3 class="title">
+                        <label for="mobile">휴대전화</label>
+                    </h3>
+
+                    <!-- 나라 mobile1 -->
+                    <div class="box no_padding_box">
+                        <select name="mobile1" class="int">
+                            <option value="대한민국" selected>대한민국 +82</option>
+                            <option value="가나">가나 +111</option>
+                            <option value="일본">일본 + 90</option>
+                        </select>
+                    </div>
+                    <!-- 번호입력 mobile2 / mobile_box -->
+                    <div class="mobile_box">
+                        <div class="box no_padding_box">
+                            <input type="text" name="mobile2" id="mobile2" class="int int2" placeholder="전화번호 입력">
+                        </div>
+                        <!-- 인증번호 버튼 btn_send -->
+                        <a href="#" id="verify_btn" class="btn_send">인증번호 받기</a>
+                    </div>
+                    <!-- 인증번호 확인 mobile3 -->
+                    <div class="box no_padding_box">
+                        <input type="text" name="auth" id="auth" class="int" placeholder="인증번호 입력하세요">
+                    </div>
+                </div>
+                <br><br>
+
+                <!-- 가입하기 버튼 btn_send -->
+                <div class="join_btn">
+                    <button id="join_btn" class="btn_send">가입하기</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- 하단 -->
+        <footer>
+            <p class="f1_info">
+                <a>이용약관</a> | <a><strong>개인정보처리방침</strong></a> | <a>책임의 한계와 법적고지</a> | <a>회원정보 고객센터</a>
+            </p>
+            <div class="f2_info">
+                <div>Copyright &copy; <strong>NAVER Corp.</strong> All Rights Reserved.</div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
+
+
